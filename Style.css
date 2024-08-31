@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 2px;
+  padding: 0;
   box-sizing: border-box;
 }
 :root {
@@ -23,6 +23,7 @@
 }
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -33,7 +34,7 @@ body * {
 /*container*/
 #Container {
   width: 100%;
-  max-width: 588px;
+  max-width: 360px;
   margin: 56px auto 0px;
   padding: 0, 24px;
 }
@@ -124,7 +125,7 @@ ul li a {
 ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
-  transform: scale(1.1);
+  
 }
 /* social-links*/
 #social-links {
@@ -163,4 +164,15 @@ footer {
 footer a {
   text-decoration: none;
   font-weight: 500;
+}
+
+@media (min-width: 700px) {
+  :root {
+  --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  
+  .light {
+      --bg-url: url(./assets/bg-desktop-light.jpg);
+
+  }
 }
